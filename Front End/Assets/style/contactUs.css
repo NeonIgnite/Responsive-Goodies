@@ -1,0 +1,327 @@
+:root {
+    --main: #fffbd2;
+    --green: #005f2a;
+    --text: #241d3a;
+  }
+  body{
+    height: 160vh;
+  }
+
+.contact-us{
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact-us h3{
+    margin-top: 90px;
+    font-size: 40px;
+    color: var(--green);
+}
+.contact-us p{
+    /* margin-top: 10px; */
+    font-size: 20px;
+    color: var(--green);
+
+}
+.contact-us .container-2{
+    margin-top: 30px;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    border: 10px solid var(--main);
+    box-shadow: 2px 2px 20px var(--text);
+    /* background-color: var(--green); */
+}
+
+/* left div */
+.contact-us .container-2 .left-div{
+    width: 40%;
+    height: 100%;
+    background-color: var(--green);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us .container-2 .left-div::before{
+    display: block;
+    content: "";
+    background-color: var(--main);
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    animation: transfer 1s;
+}
+
+
+.contact-us .container-2 .left-div::after{
+    display: block;
+    content: "";
+    background-color: var(--text);
+    opacity: 25%;
+    width: 125px;
+    height: 125px;
+    border-radius: 75px;
+    position: absolute;
+    bottom: 70px;
+    right: 70px;
+    transition: 1s;
+    animation: maxmize 2s;
+}
+
+@keyframes maxmize {
+
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+
+    100%{
+        width: 125px;
+    }
+}
+
+@keyframes transfer {
+
+    0%{
+        bottom: -400px;
+    }
+
+    100%{
+        bottom: -80px;
+    }
+}
+
+.left-div i{
+    color: var(--main);
+    margin-right: 20px;
+    margin-top: 3px;
+}
+
+.icons{
+    width: 80%;
+    margin-top: 50px;
+}
+.icon{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+
+    width: 80%;
+}
+.icon p{
+    color: var(--main);
+}
+.container-2 div h4{
+    color: var(--main);
+    font-size: 30px;
+}
+
+.left-div .p{
+    color: var(--main);
+    opacity: 70%;
+
+}
+
+
+/* right form */
+label{
+    color: var(--green);
+    cursor: pointer;
+}
+.contact-us .container-2 form{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+    position: relative;
+}
+
+.infos , .subject , .message{
+    width: 100%;
+}
+.infos{
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.subject{
+    margin-top: 20px;
+    width: 100%;
+    height: 15%;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: nowrap; */
+    justify-content: space-around;
+
+}
+.subject h5{
+    font-size: 1rem;
+}
+.subject input{
+    cursor: pointer;
+}
+.message{
+    margin-top: 30px;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.message input{
+    width: 60%;
+}
+
+.radioButtons{
+    /* width: 50%; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+
+.radioButtons label{
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.radioButtons input{
+    background-color: var(--main);
+    color: var(--main);
+}
+
+.buttons{
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    bottom: 10%;
+    right: 4%;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px;
+}
+
+.info input, .message input{
+    height: 30px;
+    border: 0px;
+    background-color: var(--main);
+    border-bottom: 1px solid var(--green);
+    padding: 5px;
+    color: var(--green);
+}
+
+.info input:focus, .message input:focus{
+    outline: none;
+    box-shadow: 2px 2px 5px var(--green);
+}
+
+input[type='radio']:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: var(--main);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid var(--green);
+    transition: 0.5s;
+}
+
+input[type='radio']:checked:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: var(--green);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid var(--main);
+}
+@media only screen and (min-width: 160px) and (max-width: 568px){
+    body{height: 170vh;}
+    .contact-us .container-2{flex-direction: column; height: 100%;}
+    .contact-us .container-2 .left-div{width: 100%; height: 60%; justify-content: space-around;}
+    .contact-us .container-2 .left-div .icons{margin-top: 5px;}
+    .contact-us .container-2 .left-div .icons .icon{margin-top: 10px;}
+    .contact-us .container-2 .left-div::before{width:200px; height: 200px; bottom: -20px;}
+    .contact-us .container-2 .left-div::after{width:150px; height: 150px; bottom: -50px;}
+    .left-div h4{font-size: 4rem;}
+    .left-div p{font-size: 1rem;}
+    .contact-us .container-2 form{width:100%;}
+    /* .contact-us .container-2 form .infos .info{padd} */
+    form .buttons{right:0;}
+    form .message{margin-top: 50px;}
+    form .radioButtons{flex-wrap: wrap}
+  }
+  @media only screen and (min-width: 569px) and (max-width: 868px){
+    body{height: 170vh;}
+    .contact-us .container-2{flex-direction: column;}
+    .contact-us .container-2 .left-div{width: 100%; justify-content: space-around;}
+    .contact-us .container-2 .left-div .icons{margin-top: 5px;}
+    .contact-us .container-2 .left-div .icons .icon{margin-top: 10px;}
+    .contact-us .container-2 .left-div::before{width:200px; height: 200px; bottom: -20px;}
+    .contact-us .container-2 .left-div::after{width:150px; height: 150px; bottom: -50px;}
+    .left-div h4{font-size: 4rem;}
+    .left-div p{font-size: 1rem;}
+    .contact-us .container-2 form{width:100%;}
+    form .buttons{right:10%;}
+    form .message{margin-top: 50px; right:1px;}
+    form .radioButtons{flex-wrap: wrap}
+  }
+  @media only screen and (min-width: 869px) and (max-width: 1024px){
+    body{height: 170vh;}
+    .contact-us .container-2{flex-direction: column;}
+    .contact-us .container-2 .left-div{width: 100%; justify-content: space-around;}
+    .contact-us .container-2 .left-div .icons{margin-top: 5px;}
+    .contact-us .container-2 .left-div .icons .icon p{font-size: 1.2rem;}
+    .contact-us .container-2 .left-div .icons .icon{margin-top: 5px;}
+    /* .contact-us .container-2 .left-div::before{width:200px; height: 200px; bottom: -20px;}
+    .contact-us .container-2 .left-div::after{width:150px; height: 150px; bottom: -50px;} */
+    /* .left-div h4{font-size: 1rem;}
+    .left-div p{font-size: 1rem;} */
+    .contact-us .container-2 form{width:100%;}
+    form .buttons{right:10%;}
+    form .message{margin-top: 50px; right:1px;}
+    form .radioButtons{flex-wrap: wrap}
+  }
+  @media only screen and (min-width: 1024px) and (max-width: 1200px){
+    body{height: 170vh;}
+    .contact-us .container-2{flex-direction: column;}
+    .contact-us .container-2 .left-div{width: 100%; justify-content: space-around;}
+    .contact-us .container-2 .left-div .icons{margin-top: 5px;}
+    .contact-us .container-2 .left-div .icons .icon p{font-size: 1.2rem;}
+    .contact-us .container-2 .left-div .icons .icon{margin-top: 5px;}
+    /* .contact-us .container-2 .left-div::before{width:200px; height: 200px; bottom: -20px;}
+    .contact-us .container-2 .left-div::after{width:150px; height: 150px; bottom: -50px;} */
+    /* .left-div h4{font-size: 1rem;}
+    .left-div p{font-size: 1rem;} */
+    .contact-us .container-2 form{width:100%;}
+    form .buttons{right:10%;}
+    form .message{margin-top: 50px; right:1px;}
+    form .radioButtons{flex-wrap: wrap}
+  }

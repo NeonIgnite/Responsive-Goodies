@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--SEO Marketting-->
+    <meta name="keywords" content="x, y, ,etc" />
+    <meta name="description" content="x, y, ,etc">
+    <meta name="author" content="x, y, ,etc">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/style/all.min.css">
+    <!-- <link rel="stylesheet" href="./Assets/style/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./Assets/style/sass.css">
+    <link rel="stylesheet" href="./Assets/style/index.css">
+
+    <!-- To refresh every 30 second like facebook while scrolling-->
+    <!-- <meta http-equiv="refresh" content="30"> -->
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="Assets/style/contactUs.css">
+    <link rel="icon" type="image/png" href="./Assets/images/logo.png" />
+
+    <title>Goodies-ConatactUs</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <span class="hide">Goodies</span>
+            <a href="Home.html">
+                <picture>
+                    <img src="./Assets/images/LogoWithDescription.png" alt="Goodies Logo">
+                </picture>
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li class="dropdown"><a href="Home.html">Home</a></li>
+                <li><a href="#" onclick="comingSoon()">Product and services</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contactUs.html">▼ Contact Us</a></li>
+                <li><a href="#" onclick="comingSoon()">العربية</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-us">
+        <h3>Contact Us</h3>
+        <p>Any question or remarks? Just write us a message!</p>
+
+        <div class="container-2">
+             
+            <div class="left-div">
+                <h4>Contact Information</h4>
+                <p class="p">Say something to start a live chat!</p>
+                <div class="icons">
+                    <div class="icon">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <p>+1012 3456 789</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>demo@gmail.com</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Industrial Area, New Cairo 3, Cairo <br>Governorate 4716027</p>
+                    </div>
+                </div>
+            </div>
+
+            <form>
+                <div class="infos">
+                    <div class="info">
+                        <label for="fName">First Name</label>
+                        <input type="text" id="fName" maxlength="5" size="30" required>
+                    </div>
+                    <div class="info">
+                        <label for="lName">Last Name</label>
+                        <input type="text" id="lName" maxlength="5" size="30" required>
+                    </div>
+                    <div class="info">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" maxlength="5" size="30" required>
+                    </div>
+                    <div class="info">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" maxlength="5" size="30" required>
+                    </div>
+                </div>
+                <div class="subject">
+                    <h5>Select subject?</h5>
+                    <div class="radioButtons">
+                        <input type="radio" id="option1" name="sub" value="option1">
+                        <label for="option1">Option 1</label>
+                        <input type="radio" id="option2" name="sub" value="option2">
+                        <label for="option2">Option 2</label>
+                        <input type="radio" id="option3" name="sub" value="option3">
+                        <label for="option3">Option 3</label>
+                        <input type="radio" id="option4" name="sub" value="option4">
+                        <label for="option4">Option 4</label>
+                    </div>
+
+                </div>
+                <div class="message">
+                    <label for="message">Message</label>
+                    <input type="text" id="message" maxlength="5" placeholder="Write your message..." size="30" required>
+                </div>
+                <div class="buttons">
+                    <button class="blob-btn">
+                        Send Message
+                        <span class="blob-btn__inner">
+                            <span class="blob-btn__blobs">
+                                <span class="blob-btn__blob"></span>
+                                <span class="blob-btn__blob"></span>
+                                <span class="blob-btn__blob"></span>
+                                <span class="blob-btn__blob"></span>
+                            </span>
+                        </span>
+                    </button>
+                    <br />
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="hide">
+                        <defs>
+                            <filter id="goo">
+                                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                                    result="goo"></feColorMatrix>
+                                <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                            </filter>
+                        </defs>
+                    </svg>
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram fa-xl"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+            <a href="https://www.twitter.com/"><i class="fa-brands fa-square-twitter fa-xl"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-xl"></i></a>
+        </div>
+        <div class="footer-nav">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="#" onclick="comingSoon()">Product and services</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><a href="#" onclick="comingSoon()">العربية</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2023 Goodies Egypt</p>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
